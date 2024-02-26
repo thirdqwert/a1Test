@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.car {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    animation-name: rightSlide;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.43,.08,.94,.38);
+}
+
+.top__car {
+    border-radius: 20px 100px 0px 0px;
+    width: 200px;
+    height: 100px;
+    background: red;
+}
+
+.midle__car {
+    background: red;
+    width: 500px;
+    height: 150px;
+    border-radius: 100px 100px 20px 20px;
+}
+
+.down__car {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.tire {
+    border-radius: 50%;
+    background: gray;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.tire__first {
+    left: 100px;
+    top: -50px;
+    z-index: 1;
+}
+
+.tire__second {
+    right: 100px;
+    top: -50px;
+    z-index: 1;
+}
+
+@keyframes rightSlide {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
